@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DOBERTO VCF — Lis moun enskri</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="topbar">
+  <a href="/" class="brand"><span class="dot"></span> DOBERTO VCF</a>
+  <div class="nav-links">
+    <a href="index.html">Anrejistre</a>
+    <a href="admin.html">Admin</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="hero">
+    <h1>Moun ki <span>deja enskri</span></h1>
+    <p>Pou pwoteje vi prive tout moun, nimewo yo pa afiche isit la — sèlman non yo.</p>
+  </div>
+
+  <div class="panel">
+    <table>
+      <thead><tr><th>Non</th><th>Peyi</th></tr></thead>
+      <tbody id="listBody"></tbody>
+    </table>
+    <div class="pager">
+      <button class="secondary" id="prevBtn">← Anvan</button>
+      <span class="badge" id="pageInfo"></span>
+      <button class="secondary" id="nextBtn">Apre →</button>
+    </div>
+  </div>
+
+  <div class="panel">
+    <h3 style="margin-top:0">Download fichye VCF la</h3>
+    <p class="hint" style="margin-bottom:16px">
+      Ou dwe te anrejistre deja (ak menm non ak nimewo a) pou w ka download.
+      Fichye a disponib sèlman lè gen omwen 500 moun enskri, e li ka gen maksimòm 50 000 kontak.
+    </p>
+    <form id="dlForm">
+      <label for="dlName">Non ou te anrejistre a</label>
+      <input id="dlName" type="text" required />
+
+      <label>Nimewo ou te anrejistre a</label>
+      <div class="phone-row">
+        <select id="dlDial"></select>
+        <input id="dlPhone" type="tel" inputmode="numeric" required />
+      </div>
+
+      <button type="submit" id="dlBtn">Verifye &amp; Download</button>
+      <div class="msg" id="dlMsg"></div>
+    </form>
+  </div>
+
+  <p class="footer-note">DOBERTO VCF — Fèt pa Doberto Mr Lit.</p>
+</div>
+
+<script src="js/countries.js"></script>
+<script src="js/list.js"></script>
+</body>
+</html>
