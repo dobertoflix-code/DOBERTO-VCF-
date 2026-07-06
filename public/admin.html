@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DOBERTO VCF — Admin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<div class="topbar">
+  <a href="/" class="brand"><span class="dot"></span> DOBERTO VCF</a>
+  <div class="topbar-right">
+    <div class="nav-links">
+      <a href="index.html" data-i18n="nav_register">Anrejistre</a>
+      <a href="list.html" data-i18n="nav_list">Lis moun</a>
+    </div>
+    <select id="langSelect" class="lang-select">
+      <option value="ht">KR</option>
+      <option value="en">EN</option>
+      <option value="fr">FR</option>
+    </select>
+  </div>
+</div>
+
+<div class="container">
+
+  <div id="loginPanel" class="panel">
+    <h3 style="margin-top:0" data-i18n="admin_login_title">Koneksyon Admin</h3>
+    <label for="pw" data-i18n="label_password">Modpas admin</label>
+    <input id="pw" type="password" required />
+    <button id="loginBtn" data-i18n="btn_login">Konekte</button>
+    <div class="msg" id="loginMsg"></div>
+  </div>
+
+  <div id="adminPanel" class="panel" style="display:none">
+    <div class="panel-header">
+      <h3 data-i18n="admin_list_title">Tout moun ki enskri</h3>
+      <button class="secondary btn-auto" id="logoutBtn" data-i18n="btn_logout">Dekonekte</button>
+    </div>
+
+    <input id="searchBox" data-i18n-placeholder="search_placeholder" placeholder="Chèche pa non..." style="margin-top:16px" />
+
+    <div class="table-scroll">
+      <table>
+        <thead><tr><th data-i18n="th_name">Non</th><th data-i18n="th_email">Email</th><th data-i18n="th_country">Peyi</th><th data-i18n="th_phone">Nimewo</th></tr></thead>
+        <tbody id="adminBody"></tbody>
+      </table>
+    </div>
+
+    <div class="pager">
+      <button class="secondary" id="aPrev" data-i18n="pager_prev">← Anvan</button>
+      <span class="badge" id="aPageInfo"></span>
+      <button class="secondary" id="aNext" data-i18n="pager_next">Apre →</button>
+    </div>
+
+    <button id="exportBtn" style="margin-top:24px" data-i18n="btn_export">Ekspòte tout an CSV</button>
+  </div>
+
+  <p class="footer-note" data-i18n="footer_admin">DOBERTO VCF — Zòn admin sèlman. Aksè restrenn.</p>
+</div>
+
+<script src="js/i18n.js"></script>
+<script src="js/admin.js"></script>
+</body>
+</html>
