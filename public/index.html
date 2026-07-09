@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="monetag" content="87080ac4b9f84f85258cca0a42186694" />
+<title>DOBERTO VCF — Anrejistre nimewo w</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/style.css" />
+<link rel="manifest" href="manifest.webmanifest" />
+<meta name="theme-color" content="#07080d" />
+<link rel="apple-touch-icon" href="icons/icon-192.png" />
+</head>
+<body>
+
+<div class="topbar">
+  <a href="/" class="brand"><span class="dot"></span> DOBERTO VCF</a>
+  <div class="topbar-right">
+    <div class="nav-links">
+      <a href="list.html" data-i18n="nav_list" data-tour="list-link">Lis moun</a>
+      <a href="admin.html" data-i18n="nav_admin">Admin</a>
+    </div>
+    <select id="langSelect" class="lang-select">
+      <option value="ht">KR</option>
+      <option value="en">EN</option>
+      <option value="fr">FR</option>
+    </select>
+  </div>
+</div>
+
+<div class="capacity-banner" id="capacityBanner" data-tour="capacity">
+  <div class="capacity-inner">
+    <span class="capacity-icon">🎯</span>
+    <div class="capacity-info">
+      <div class="capacity-label" data-i18n="capacity_label">Objektif kolèkte</div>
+      <div class="capacity-numbers"><span id="capacityCurrent">0</span><span class="muted"> / <span id="capacityMax">50 000</span> <span data-i18n="capacity_people">moun</span></span></div>
+    </div>
+    <div class="capacity-track"><div class="capacity-fill" id="capacityFill"></div></div>
+    <div class="capacity-pct" id="capacityPct">0%</div>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="hero" data-tour="hero">
+    <h1><span data-i18n="hero_title_1">Antre nan rezo a,</span> <span style="color:var(--signal)" data-i18n="hero_title_2">fè yo wè status ou</span></h1>
+    <p data-i18n="hero_desc">Anrejistre non ou ak nimewo WhatsApp ou pou plis moun ka gen kontak ou epi wè status ou. Ou kapab download tout lis la lè n rive nan objektif la.</p>
+  </div>
+
+  <div class="panel" data-tour="form">
+    <form id="regForm">
+      <label for="name" data-i18n="label_name">Non konplè</label>
+      <input id="name" type="text" data-i18n-placeholder="ph_name" placeholder="Egzanp: Jean Baptiste" required />
+
+      <label for="email" data-i18n="label_email">Email (opsyonèl)</label>
+      <input id="email" type="email" data-i18n-placeholder="ph_email" placeholder="egzanp@gmail.com" />
+
+      <label data-i18n="label_phone">Nimewo WhatsApp</label>
+      <div class="phone-row">
+        <select id="dial"></select>
+        <input id="phone" type="tel" inputmode="numeric" data-i18n-placeholder="ph_phone" placeholder="Nimewo san kòd peyi" required />
+      </div>
+      <div class="hint" id="phoneHint" data-i18n="hint_choose_country">Chwazi peyi ou anwo a.</div>
+
+      <button type="submit" id="submitBtn" data-i18n="btn_register">Anrejistre m</button>
+      <div class="msg" id="formMsg"></div>
+    </form>
+
+    <div class="stat-bar" id="statBar" style="display:none" data-tour="unlock">
+      <span id="statText"></span>
+      <div class="stat-track"><div class="stat-fill" id="statFill" style="width:0%"></div></div>
+    </div>
+  </div>
+
+  <div class="panel" style="text-align:center">
+    <p class="hint" style="margin:0 0 12px" data-i18n="sponsor_desc">Ofri espesyal pou ou jodi a 👇</p>
+    <a href="https://omg10.com/4/11250663" target="_blank" rel="noopener sponsored" class="icon-btn" style="display:inline-block;width:auto;background:linear-gradient(135deg, var(--violet), var(--signal));color:#04150f;padding:12px 24px;border-radius:10px;text-decoration:none;font-weight:600" data-i18n="sponsor_btn">🎁 Gade ofri a</a>
+  </div>
+
+  <div class="social-row">
+    <a href="https://www.instagram.com/doberto.best.dev?igsh=MW5iOWY3d2VlMTViaw==" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+    </a>
+    <a href="https://github.com/Doberto555" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+      <svg viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.284-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.84 1.238 1.84 1.238 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.303-5.466-1.332-5.466-5.93 0-1.31.468-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23a11.5 11.5 0 013.003-.404c1.02.005 2.047.138 3.006.404 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg>
+    </a>
+    <a href="https://whatsapp.com/channel/0029VbCtwNpJkK7Cng8qex1A" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp Channel">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zm-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    </a>
+  </div>
+
+  <p class="footer-note" data-i18n="footer_note">DOBERTO VCF — Fèt pa Doberto Mr Lit. Nimewo yo pa janm afiche piblikman.</p>
+</div>
+
+<!-- ================= POPUP "ENSTALE APLIKASYON AN" ================= -->
+<div class="install-overlay" id="installOverlay" hidden>
+  <div class="install-card">
+    <div class="install-handle"></div>
+    <button class="install-close" id="installClose" aria-label="Fèmen">✕</button>
+
+    <img class="install-icon" src="icons/icon-192.png" alt="DOBERTO VCF" width="86" height="86" />
+
+    <span class="install-badge">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 9.48l1.84-3.18a.5.5 0 00-.87-.5l-1.86 3.22a11 11 0 00-9.42 0L5.43 5.8a.5.5 0 00-.87.5L6.4 9.48A9.94 9.94 0 002 17h20a9.94 9.94 0 00-4.4-7.52zM7 14a1 1 0 111-1 1 1 0 01-1 1zm10 0a1 1 0 111-1 1 1 0 01-1 1z"/></svg>
+      <span data-i18n="install_badge">Rekòmande pou Android</span>
+    </span>
+
+    <h2 data-i18n="install_title">Enstale DOBERTO VCF</h2>
+    <p class="install-desc" data-i18n="install_desc">Ajoute app la sou ekran akèy ou — gratis, san Play Store, mizajou otomatik.</p>
+
+    <div class="install-features">
+      <div class="install-feature">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3l9 8h-3v9h-5v-6H11v6H6v-9H3z"/></svg></span>
+        <div>
+          <strong data-i18n="install_feat1_title">Aksè enstantane</strong>
+          <span data-i18n="install_feat1_desc">Louvri DOBERTO VCF dirèkteman soti nan ekran akèy ou.</span>
+        </div>
+      </div>
+      <div class="install-feature">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h6V2H2v8h2zm16 0v6h2V2h-8v2zM4 20v-6H2v8h8v-2zm16-6v6h-6v2h8v-8z"/></svg></span>
+        <div>
+          <strong data-i18n="install_feat2_title">Plen ekran</strong>
+          <span data-i18n="install_feat2_desc">Pa gen bar adrès — tankou yon vrè app.</span>
+        </div>
+      </div>
+      <div class="install-feature">
+        <span class="ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M7 2v11h3v9l7-12h-4l4-8z"/></svg></span>
+        <div>
+          <strong data-i18n="install_feat3_title">Pi rapid</strong>
+          <span data-i18n="install_feat3_desc">Chaje pi vit chak fwa ou louvri l.</span>
+        </div>
+      </div>
+    </div>
+
+    <button class="install-btn" id="installActionBtn">
+      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 20h14v-2H5v2zM19 9h-4V3H9v6H5l7 7 7-7z"/></svg>
+      <span data-i18n="install_btn">Enstale Aplikasyon an</span>
+    </button>
+    <button class="install-later" id="installLater" data-i18n="install_later">Pita</button>
+  </div>
+</div>
+
+<button class="tour-replay-btn" id="tourReplayBtn" aria-label="Gid" title="Gid" type="button">?</button>
+
+<script src="js/i18n.js"></script>
+<script src="js/countries.js"></script>
+<script src="js/country-picker.js"></script>
+<script src="js/app.js"></script>
+<script src="js/install-prompt.js"></script>
+<script src="js/tour.js"></script>
+
+<!-- Monetag - piblisite (zòn 11250614 / 11250619) -->
+<script>(function(s){s.dataset.zone='11250614',s.src='https://al5sm.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+<script>(function(s){s.dataset.zone='11250619',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')))</script>
+</body>
+</html>
